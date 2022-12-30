@@ -1,0 +1,114 @@
+.work-filters {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--mb-2);
+}
+
+.work-item {
+    color: var(--title-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: var(--medium-weight);
+}
+
+.active-work,
+.work-item:hover {
+    background-color: var(--bg-color);
+    color: var(--container-color);
+}
+
+.work-container {
+    grid-template-columns: repeat(2, max-content);
+    gap: 3rem;
+    justify-content: center;
+}
+
+.work-card {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
+.work-img {
+    width: 295px;
+    border-radius: 1rem;
+    margin-bottom: var(--mb-1);
+}
+
+.work-title {
+    font-size: var(--normal-font);
+    font-weight: var(--medium-weight);
+    margin-bottom: var(--mb-0-5);
+}
+
+.work-button {
+    color: var(--text-color);
+    font-size: var(--small-font);
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.work-button:hover {
+    color: var(--bg-color);
+}
+
+.work-button-icon {
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.work-button:hover .work-button-icon {
+    transform: translateX(0.25rem);
+}
+
+@media screen and (max-width: 992px) {
+    .work-container {
+        gap: 1.25rem;
+    }
+
+    .work-card {
+        padding: 1rem;
+    }
+
+    .work-img {
+        margin-bottom: 0.75rem;
+    }
+
+    .work-title {
+        margin-bottom: 0.25rem;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .work-container {
+        grid-template-columns: max-content;
+    }
+}
+  
+@media screen and (max-width: 576px) {
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+
+    .work-img {
+        width: 100%;
+    }
+}
+  
+@media screen and (max-width: 350px) {
+    .work-item {
+        /* padding: 0.25rem 0.35rem; */
+        font-size: var(--small-font);
+    }
+
+    .work-filters {
+        column-gap: 0.25rem;
+    }
+}
